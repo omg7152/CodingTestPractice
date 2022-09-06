@@ -1,22 +1,22 @@
-import sys;
+import sys
 
-N = int(sys.stdin.readline().rstrip());
+N = int(sys.stdin.readline().rstrip())
 
 #각 정수에서 1을 만들 때까지 걸리는 최소연산횟수 리스트
-dp = [0] * (N + 1);
+dp = [0] * (N + 1)
 
 #2 부터 주어진 정수 까지 반복
 for i in range(2, N + 1):
 
     #초기값으로 i - 1 인 정수의 최소연산횟수에 + 1 하여 저장 (3번 조건)
-    dp[i] = dp[i - 1] + 1;
+    dp[i] = dp[i - 1] + 1
 
     #i가 3으로 나누어 떨어질때 i // 3 인 정수의 최소연산횟수에 1 한값이 저장되어있는 최소연산횟수 보다 작다면 저장 (1번 조건)
     if i % 3 == 0:
-        dp[i] = min(dp[i], dp[i // 3] + 1);
+        dp[i] = min(dp[i], dp[i // 3] + 1)
 
     #i가 2으로 나누어 떨어질때 i // 2 인 정수의 최소연산횟수에 1 한값이 저장되어있는 최소연산횟수 보다 작다면 저장 (2번 조건)
     if i % 2 == 0:
-        dp[i] = min(dp[i], dp[i // 2] + 1);
+        dp[i] = min(dp[i], dp[i // 2] + 1)
 
-print(dp[N]);
+print(dp[N])

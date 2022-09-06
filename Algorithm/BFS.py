@@ -3,17 +3,17 @@
     #2. 큐에서 노드를 꺼낸 뒤에 해당 노드의 인접 노드 중에서
     #   방문하지 않은 노드를 모두 큐에 삽입하고 방문 처리
     #3. 더이상 2번 과정을 수행 할 수 없을 때까지 반복
-from collections import deque;
+from collections import deque
 def bfs(graph, start, visited):
-    queue = deque([start]);
-    visited[start] = True;
+    queue = deque([start])
+    visited[start] = True
     while queue:
-        v = queue.popleft();
-        print(v, end=' ');
+        v = queue.popleft()
+        print(v, end=' ')
         for i in graph[v]:
             if not visited[i]:
-                queue.append(i);
-                visited[i] = True;
+                queue.append(i)
+                visited[i] = True
 
 graph = [
     [],
@@ -25,9 +25,9 @@ graph = [
     [7],
     [2, 6, 8],
     [1, 7]
-];
+]
 
-visited = [False] * 9;
+visited = [False] * 9
 
-bfs(graph, 1, visited);
-print();
+bfs(graph, 1, visited)
+print()

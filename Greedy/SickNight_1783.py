@@ -1,13 +1,13 @@
-import sys;
+import sys
 
-N, M = list(map(int, sys.stdin.readline().strip().split()));
+N, M = list(map(int, sys.stdin.readline().strip().split()))
 
 if N == 1:
-    print(1);
+    print(1)
 elif N == 2:
-    print(min(4, (M + 1) // 2));
+    print(min(4, (M + 1) // 2))
 else:
     if M <= 6:
-        print(min(4, M));
+        print(min(4, M))
     else:
-        print(M - 2);
+        print(M - 2)

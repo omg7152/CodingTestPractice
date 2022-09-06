@@ -3,17 +3,17 @@
 def recursive_function(i):
     if i == 100:
         return
-    print(i, '번째 재귀함수에서 ', i + 1, '번째 재귀함수를 호출 합니다.');
-    recursive_function(i + 1);
-    print(i, '번째 재귀함수를 종료 합니다.');
+    print(i, '번째 재귀함수에서 ', i + 1, '번째 재귀함수를 호출 합니다.')
+    recursive_function(i + 1)
+    print(i, '번째 재귀함수를 종료 합니다.')
 
-recursive_function(1);
+recursive_function(1)
 
 #팩토리얼 : n! => 1부터 n까지의 자연수를 모두 곱한 값 (0!, 1! = 1)
 def factorial(n):
     if n <= 1:
-        return 1;
+        return 1
 
-    return n * factorial(n - 1);
+    return n * factorial(n - 1)
 
-print(factorial(5));
+print(factorial(5))

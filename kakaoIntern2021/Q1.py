@@ -5,5 +5,3 @@ def solution(s):
         s = s.replace(list[i], str(i))
     answer = int(s)
     return answer
-
-print(solution("23four5six7"))

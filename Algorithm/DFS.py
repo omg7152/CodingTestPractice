@@ -4,12 +4,12 @@
     #   방문하지 않은 인접 노드가 없으면 스택에서 최상단 노드를 꺼냄
     #3. 더이상 2번 과정을 수행할 수 없을 때 까지 반복
 def dfs(graph, v, visited):
-    visited[v] = True;
-    print(v, end=' ');
+    visited[v] = True
+    print(v, end=' ')
 
     for i in graph[v]:
         if not visited[i]:
-            dfs(graph, i, visited);
+            dfs(graph, i, visited)
 
 graph = [
     [],
@@ -21,9 +21,9 @@ graph = [
     [7],
     [2, 6, 8],
     [1, 7]
-];
+]
 
-visited = [False] * 9;
+visited = [False] * 9
 
-dfs(graph, 1, visited);
-print();
+dfs(graph, 1, visited)
+print()
