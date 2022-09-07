@@ -66,3 +66,6 @@ def solution(n, start, end, roads, traps):
             heapq.heappush(queue, [sum_cost, next_node, next_state])
 
     return answer
+
+print(solution(3, 1, 3, [[1, 2, 2], [3, 2, 3]], [2]))
+print(solution(	4, 1, 4, [[1, 2, 1], [3, 2, 1], [2, 4, 1]], [2, 3]))

@@ -36,3 +36,8 @@ def solution(gems):
             dic[gems[end]] = dic.get(gems[end], 0) + 1
 
     return answer
+
+print(solution(["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]))
+print(solution(["AA", "AB", "AC", "AA", "AC"]))
+print(solution(["XYZ", "XYZ", "XYZ"]))
+print(solution(["ZZZ", "YYY", "NNNN", "YYY", "BBB"]))

@@ -27,3 +27,4 @@ def solution(expression):
     return answer
 
 print(solution("100-200*300-500+20"))
+print(solution("50*6-3*2"))
