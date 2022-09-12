@@ -1,6 +1,3 @@
-import re
-aaa = "100-200*300-500+20"
+aaaa = [1, 2, 3, 4]
 
-nums = list(map(str, re.split('[0-9]', aaa)))
-
-print(nums)
+print(aaaa[:-1])
