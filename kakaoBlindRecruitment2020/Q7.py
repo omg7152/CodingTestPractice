@@ -21,6 +21,7 @@ def solution(board):
             answer = count
             break
 
+        # 상하좌우
         for move in moves:
             dx1, dy1, dx2, dy2 = x1 + move[0], y1 + move[1], x2 + move[0], y2 + move[1]
 
@@ -30,6 +31,7 @@ def solution(board):
                     visit[dy2][dx2][dx1][dy1] = True
                     queue.append([dx1, dy1, dx2, dy2, direction, count + 1])
 
+        # 회전
         for spin in [-1, 1]:
             dx1, dy1, dx2, dy2 = 0, 0, 0, 0
             if direction == 0:
