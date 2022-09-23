@@ -3,14 +3,14 @@ def solution(record):
 
     user = {}
     
+    # 채팅방에 들어왔거나 닉네임을 변경했을 때 현재 닉네임을 dict에 id 를 키로하여 저장
     for re in record:
         if re.split()[0] == "Leave":
             continue
-        
         commend, id, name = map(str, re.split())
-
         user[id] = name
 
+    # record를 반복하면서 각각 id값으로 현재 닉네임으로 하여 메세지 출력
     for re in record:
         if re.split()[0] == "Leave":
             commend, id = map(str, re.split())
